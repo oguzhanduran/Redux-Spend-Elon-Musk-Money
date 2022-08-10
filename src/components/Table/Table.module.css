@@ -10,13 +10,13 @@
   font-weight: 600;
   text-align: center;
   margin-bottom: 1.5rem;
+  margin-left: -10px;
+  margin-right: -7px;
 }
 
 .card {
-  margin: -5px;
-  margin-top: 10px;
-  min-width: 18rem;
-  max-width: 22rem;
+  margin-bottom: 30px;
+  max-width: 30rem;
 }
 
 .cardTitle {
@@ -73,4 +73,76 @@ input::-webkit-inner-spin-button {
   touch-action: manipulation;
   margin: 8px;
   width: 90px;
+}
+
+.containerProduct {
+  width: 1150px;
+  margin-left: 75px;
+}
+
+/* .budgetContainer {
+  width: 1115px;
+  position: sticky;
+  top: 10px;
+  background-color: blue;
+} */
+
+/* .centerMoney {
+  color: #fff;
+  background-color: #2ecc71;
+  background: linear-gradient(180deg, #2ecc71, #1abc9c);
+  padding: 20px;
+  margin: 10px 0;
+  font-family: Roboto, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  top: 0;
+  position: sticky;
+  z-index: 9999;
+  width: 1125px;
+  margin-left: 199px;
+  margin-bottom: 1.5rem;
+  min-width: 100px;
+} */
+
+@media screen and (min-width: 772px) {
+  .centerMoney {
+    color: #fff;
+    background-color: #2ecc71;
+    background: linear-gradient(180deg, #2ecc71, #1abc9c);
+    padding: 20px;
+    margin: 10px 0;
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    top: 0;
+    position: sticky;
+    z-index: 9999;
+    width: 1125px;
+    margin-left: 199px;
+    margin-bottom: 1.5rem;
+    min-width: 100px;
+  }
+}
+
+@media screen and (min-width: 10px) and (max-width: 772px) {
+  .centerMoney {
+    color: #fff;
+    background-color: #2ecc71;
+    background: linear-gradient(180deg, #2ecc71, #1abc9c);
+    padding: 20px;
+    margin: 10px 0;
+    font-family: Roboto, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    top: 0;
+    position: sticky;
+    z-index: 9999;
+    margin-bottom: 1.5rem;
+    margin-left: 100px;
+    min-width: 475px;
+  }
 }

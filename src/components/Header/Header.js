@@ -7,8 +7,8 @@ function Header() {
     <div>
       <Container>
         <Row>
-          <Col sm={2}></Col>
-          <Col>
+          <Col md={4} xs={5} lg></Col>
+          <Col xs={8} xl={12} md={8}>
             <div className={styles.picture}>
               {" "}
               <img
@@ -18,7 +18,6 @@ function Header() {
             </div>
             <h2 className={styles.title}>Spend Elon Musk' Money</h2>
           </Col>
-          <Col sm={2}></Col>
         </Row>
       </Container>
     </div>

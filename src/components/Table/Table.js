@@ -1,74 +1,45 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Navbar } from "react-bootstrap";
 import styles from "./Table.module.css";
+import { useSelector } from "react-redux";
 
 function Table() {
+  const items = useSelector((state) => state.products.items);
+  const money = useSelector((state) => state.products.money);
+  console.log(money);
+
   return (
     <div>
-      <Container>
-        <Row>
-          <Col md={1}></Col>
-          <Col className={styles.budget}>$100,000,000,000</Col>
-          <Col md={1}></Col>
+      <div className={styles.centerMoney}>${money}</div>
+      {/* <Container>
+        <Row style={{ marginLeft: "95px" }}>
+          <Col xl={12} lg={10} md={10} sm={4} xs={4}>
+            <div className={styles.centerMoney}>${money}</div>
+          </Col>
         </Row>
-        <Row>
-          <Col xl={1}></Col>
-          <Col>
-            <Card className={styles.card}>
-              <Card.Img
-                variant="top"
-                src="http://benimmenum.online/upload_files/GYAQM7GJISLJRKNXYZYJ.png"
-              />
-              <Card.Body>
-                <Card.Title className={styles.cardTitle}>Big Mac</Card.Title>
-                <Card.Text className={styles.itemCost}>$2</Card.Text>
-                <button disabled="disabled" className={styles.sellBtn}>
-                  Sell
-                </button>
-                <input type="number" className={styles.itemInput} />
-                <button className={styles.itemBuy}>Buy</button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className={styles.card}>
-              <Card.Img
-                variant="top"
-                src="http://benimmenum.online/upload_files/GYAQM7GJISLJRKNXYZYJ.png"
-              />
-              <Card.Body>
-                <Card.Title className={styles.cardTitle}>Big Mac</Card.Title>
-                <Card.Text className={styles.itemCost}>$2</Card.Text>
-                <button disabled="disabled" className={styles.sellBtn}>
-                  Sell
-                </button>
-                <input type="number" className={styles.itemInput} />
-                <button className={styles.itemBuy}>Buy</button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className={styles.card}>
-              <Card.Img
-                variant="top"
-                src="https://neal.fun/spend/images/cruise-ship.jpg"
-              />
-              <Card.Body>
-                <Card.Title className={styles.cardTitle}>Big Mac</Card.Title>
-                <Card.Text className={styles.itemCost}>$2</Card.Text>
-                <button disabled="disabled" className={styles.sellBtn}>
-                  Sell
-                </button>
-                <input
-                  type="number"
-                  className={styles.itemInput}
-                  pattern="\d*"
-                />
-                <button className={styles.itemBuy}>Buy</button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col xl={1}></Col>
+      </Container> */}
+      <Container>
+        <Row className={styles.containerProduct} style={{ marginLeft: "75px" }}>
+          {items.map((item) => (
+            <Col key={item.id} xl={4} md={6} x>
+              <Card className={styles.card}>
+                <Card.Img variant="top" src={item.image} />
+                <Card.Body>
+                  <Card.Title className={styles.cardTitle}>
+                    {item.productName}
+                  </Card.Title>
+                  <Card.Text className={styles.itemCost}>
+                    ${item.productPrice}
+                  </Card.Text>
+                  <button disabled="disabled" className={styles.sellBtn}>
+                    Sell
+                  </button>
+                  <input type="number" className={styles.itemInput} />
+                  <button className={styles.itemBuy}>Buy</button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
         </Row>
       </Container>
     </div>
