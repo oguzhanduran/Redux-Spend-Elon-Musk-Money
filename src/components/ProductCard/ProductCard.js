@@ -16,9 +16,6 @@ function ProductCard({ item, id }) {
 
   const dispatch = useDispatch();
 
-  // let maxCount = Math.floor(budget / item.productPrice);
-  // let maxTotal = Number(count) + Number(maxCount);
-
   // sending id and count to the productsSlice;
   useEffect(() => {
     dispatch(updateCount({ id: item.id, count: count }));
@@ -71,13 +68,20 @@ function ProductCard({ item, id }) {
     }
   }, [budget]);
 
-  // useEffect(() => {
-  //   if (count > maxTotal && budget > 0) {
-  //     setCount(maxTotal);
-  //   } else if (count < 0) {
-  //     setCount(0);
-  //   }
-  // }, [count]);
+  // assign maximum counts
+  const handleChange = (value) => {
+    const maxCount = Math.floor(budget / item.productPrice) + count; // + count dememizin nedeni başta girdiğimiz input(count) değerinin budget'i düşürmesi dolayısıyla Math.floor'un kalan budget değerine göre max değeri bulması.
+
+    if (value && value > 0) {
+      if (value > maxCount && budget >= 0) {
+        setCount(maxCount);
+      } else {
+        setCount(value);
+      }
+    } else {
+      setCount(0);
+    }
+  };
 
   return (
     <div>
@@ -101,7 +105,7 @@ function ProductCard({ item, id }) {
             type="number"
             className={styles.itemInput}
             value={count}
-            onChange={(e) => setCount(e.target.value)}
+            onChange={(e) => handleChange(parseInt(e.target.value))}
           />
           <button
             disabled={buyable}
