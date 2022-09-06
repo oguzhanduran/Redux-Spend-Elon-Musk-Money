@@ -5,21 +5,14 @@ import styles from "./Header.module.css";
 function Header() {
   return (
     <div>
-      <Container>
-        <Row>
-          <Col md={4} xs={5} lg></Col>
-          <Col xs={8} xl={12} md={8}>
-            <div className={styles.picture}>
-              {" "}
-              <img
-                src="https://i.insider.com/62b4c1229f5e550019aa6331?width=1136&format=jpeg"
-                alt=""
-              />
-            </div>
-            <h2 className={styles.title}>Spend Elon Musk' Money</h2>
-          </Col>
-        </Row>
-      </Container>
+      <div className={styles.picture}>
+        {" "}
+        <img
+          src="https://cdn.webtekno.com/media/cache/content_detail_v2/article/102524/elon-musk-dunyanin-en-zengin-2-insani-oldu-1606213404.jpg"
+          alt=""
+        />
+        <h2 className={styles.title}>Spend Elon Musk' Money</h2>
+      </div>
     </div>
   );
 }

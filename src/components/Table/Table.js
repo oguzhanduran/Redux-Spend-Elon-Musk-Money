@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "./Table.module.css";
 import { useSelector } from "react-redux";
-import { useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
+import Header from "../Header/Header";
 
 function Table() {
   const items = useSelector((state) => state.products.items);
@@ -16,7 +16,7 @@ function Table() {
       <Container>
         <Row className={styles.containerProduct} style={{ marginLeft: "75px" }}>
           {items.map((item) => (
-            <Col key={item.id} xl={4} md={6}>
+            <Col key={item.id} xl={4}>
               <ProductCard item={item} id={item.id} />
             </Col>
           ))}

@@ -5,6 +5,7 @@ import { Card } from "react-bootstrap";
 import styles from "./ProductCard.module.css";
 import { useEffect } from "react";
 import { updateCount } from "../../redux/products/productsSlice";
+import Header from "../Header/Header";
 
 function ProductCard({ item, id }) {
   const [count, setCount] = useState(0);
