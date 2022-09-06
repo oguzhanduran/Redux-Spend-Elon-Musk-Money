@@ -12,7 +12,6 @@ function ProductCard({ item, id }) {
   const [buyable, setBuyable] = useState("");
 
   const budget = useSelector((state) => state.products.budget);
-  const items = useSelector((state) => state.products.items);
 
   const dispatch = useDispatch();
 
@@ -46,7 +45,7 @@ function ProductCard({ item, id }) {
       var intArr = Array.from(String(count), myFunc);
 
       // Delete 0
-      if (intArr[0] == 0) {
+      if (intArr[0] === 0) {
         intArr.shift();
         // Convert array to number
         let newCount = intArr.join("");
@@ -54,7 +53,7 @@ function ProductCard({ item, id }) {
       }
     }
 
-    if (count == "") {
+    if (count === "") {
       setCount(0);
     }
   }, [count]);
