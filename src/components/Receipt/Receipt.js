@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "./Receipt.module.css";
 import { useSelector } from "react-redux";
+import Footer from "../Footer/Footer";
 
 function Receipt() {
   const items = useSelector((state) => state.products.items);
@@ -49,9 +50,10 @@ function Receipt() {
               ))}
               <div className={styles.totalName}>
                 <Col sm={1}></Col>
-                <Col sm={100}>
+                <Col>
                   <span>Total</span>
                   <span className={styles.totalPrice}>${spentMoney}</span>
+                  <Footer />
                 </Col>
                 <Col sm={1}></Col>
               </div>

@@ -73,3 +73,7 @@ input::-webkit-inner-spin-button {
   width: 90px;
   transition-duration: 0.5s;
 }
+
+.buySell {
+  text-align: center;
+}

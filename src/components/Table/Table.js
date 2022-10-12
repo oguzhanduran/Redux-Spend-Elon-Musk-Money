@@ -4,6 +4,8 @@ import styles from "./Table.module.css";
 import { useSelector } from "react-redux";
 import ProductCard from "../ProductCard/ProductCard";
 import Header from "../Header/Header";
+import Receipt from "../Receipt/Receipt";
+import Footer from "../Footer/Footer";
 
 function Table() {
   const items = useSelector((state) => state.products.items);
@@ -21,6 +23,7 @@ function Table() {
             </Col>
           ))}
         </Row>
+        <Receipt />
       </Container>
     </div>
   );
