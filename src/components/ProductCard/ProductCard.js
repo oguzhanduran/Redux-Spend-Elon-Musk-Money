@@ -5,7 +5,6 @@ import { Card } from "react-bootstrap";
 import styles from "./ProductCard.module.css";
 import { useEffect } from "react";
 import { updateCount } from "../../redux/products/productsSlice";
-import Header from "../Header/Header";
 
 function ProductCard({ item, id }) {
   const [count, setCount] = useState(0);
@@ -37,25 +36,6 @@ function ProductCard({ item, id }) {
       setSalable("");
     } else {
       setSalable("disabled");
-    }
-
-    // remove 0 at the beginning of the count
-    // convert number to an array
-    if (count) {
-      let myFunc = (num) => Number(num);
-      var intArr = Array.from(String(count), myFunc);
-
-      // Delete 0
-      if (intArr[0] === 0) {
-        intArr.shift();
-        // Convert array to number
-        let newCount = intArr.join("");
-        setCount(newCount);
-      }
-    }
-
-    if (count === "") {
-      setCount(0);
     }
   }, [count]);
 
@@ -102,7 +82,6 @@ function ProductCard({ item, id }) {
             Sell
           </button>
           <input
-            type="number"
             className={styles.itemInput}
             value={count}
             onChange={(e) => handleChange(parseInt(e.target.value))}

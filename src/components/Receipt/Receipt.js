@@ -22,7 +22,7 @@ function Receipt() {
     <div>
       <Container>
         <Row>
-          <Col md={4}></Col>
+          <Col xs={4}></Col>
 
           <Col className={styles.receiptBorder}>
             <Row>
@@ -57,7 +57,7 @@ function Receipt() {
               </div>
             </Row>
           </Col>
-          <Col md={4}></Col>
+          <Col xs={4}></Col>
         </Row>
       </Container>
     </div>
