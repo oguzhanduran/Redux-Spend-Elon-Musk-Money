@@ -38,7 +38,7 @@
     background-color: #2ecc71;
     background: linear-gradient(180deg, #2ecc71, #1abc9c);
     padding: 20px;
-    margin: 10px 0;
+
     font-family: Roboto, sans-serif;
     font-size: 32px;
     font-weight: 700;
@@ -48,8 +48,11 @@
     z-index: 9999;
     margin-bottom: 1.5rem;
     margin-left: 100px;
-    min-width: 475px;
-    max-width: 500px;
+    right: 10px;
+
+    width: 475px;
+
+    position: relative;
   }
 }
 
