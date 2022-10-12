@@ -20,7 +20,7 @@
     background-color: #2ecc71;
     background: linear-gradient(180deg, #2ecc71, #1abc9c);
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px 85px;
     font-family: Roboto, sans-serif;
     font-size: 32px;
     font-weight: 700;
@@ -28,10 +28,7 @@
     top: 0;
     position: sticky;
     z-index: 9999;
-    width: 1125px;
-    margin-left: 199px;
     margin-bottom: 1.5rem;
-    min-width: 100px;
   }
 }
 

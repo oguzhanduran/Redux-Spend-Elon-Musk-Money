@@ -12,8 +12,8 @@ function Table() {
 
   return (
     <div>
-      <div className={styles.centerMoney}>${editBudget}</div>
       <Container>
+        <div className={styles.centerMoney}>${editBudget}</div>
         <Row className={styles.containerProduct} style={{ marginLeft: "75px" }}>
           {items.map((item) => (
             <Col key={item.id} xl={4}>

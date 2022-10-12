@@ -5,10 +5,10 @@
 <div>
 
   <p align="center">
-The app lets you spend Elon Musk's money by choosing certain products. You can also see the receipt at the end of the page.
+    The application provides adding and deleting your notes together with a selected background color.
     <br />
     <br />
-    <a href="https://spend-elon-musk-money.netlify.app/" target="_blank">↪️ See it live!</a>
+    <a href="https://oguzhan-duran-redux-note-app.netlify.app/" target="_blank">↪️ See it live!</a>
   </p>
 </div>
 
@@ -23,7 +23,6 @@ The app lets you spend Elon Musk's money by choosing certain products. You can a
 - [React.js](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
 - [React-Bootstrap](https://react-bootstrap.github.io/)
-- [Redux-toolkit](https://redux-toolkit.js.org/)
 
 <!-- SETUP -->
 
