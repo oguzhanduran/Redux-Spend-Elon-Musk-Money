@@ -74,25 +74,27 @@ function ProductCard({ item, id }) {
           <Card.Text className={styles.itemCost}>
             ${item.productPrice}
           </Card.Text>
-          <button
-            disabled={salable}
-            className={salable === "" ? styles.sellBtn : styles.disabledBtn}
-            onClick={sell}
-          >
-            Sell
-          </button>
-          <input
-            className={styles.itemInput}
-            value={count}
-            onChange={(e) => handleChange(parseInt(e.target.value))}
-          />
-          <button
-            disabled={buyable}
-            className={buyable === "" ? styles.buyBtn : styles.disabledBtn}
-            onClick={buy}
-          >
-            Buy
-          </button>
+          <div className={styles.buySell}>
+            <button
+              disabled={salable}
+              className={salable === "" ? styles.sellBtn : styles.disabledBtn}
+              onClick={sell}
+            >
+              Sell
+            </button>
+            <input
+              className={styles.itemInput}
+              value={count}
+              onChange={(e) => handleChange(parseInt(e.target.value))}
+            />
+            <button
+              disabled={buyable}
+              className={buyable === "" ? styles.buyBtn : styles.disabledBtn}
+              onClick={buy}
+            >
+              Buy
+            </button>
+          </div>
         </Card.Body>
       </Card>
     </div>
